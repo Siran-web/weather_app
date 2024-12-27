@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { WeatherProvider } from "../context/weatherContext";
 import WeatherApp from "./weatherApp";
-// const API_KEY = import.meta.env.VITE_API_KEY;
 
 function Weather() {
     const [weatherData, setWeatherData] = useState(null);

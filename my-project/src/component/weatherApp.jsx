@@ -31,7 +31,7 @@ function WeatherApp() {
       </div>
 
       {weatherData && !isLoading && (
-        <div className="border-x-white">
+        <>
           <div className="flex justify-center items-center border-b-2">
             <p className="items-center my-3">
               {weatherData.name}, {weatherData.sys.country}
@@ -48,12 +48,12 @@ function WeatherApp() {
             Visibility : {Math.round(weatherData.visibility)}{" "}mi
           </div>
           <div className="my-2 py-1 items-center flex justify-center border-b-2 border-neutral-500">
-            Humidity : {Math.round(weatherData.main.humidity)}{" "}%
+            Humidity : {weatherData.coord.lon}{" "}%
           </div>
           <div className="my-2 py-1 items-center flex justify-center border-b-2 border-neutral-500">
             Wind Speed : {Math.round(weatherData.wind.speed)}{" "}Km/h
           </div>
-        </div>
+        </>
       )}
     </div>
   );
